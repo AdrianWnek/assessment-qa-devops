@@ -8,7 +8,7 @@ app.use(express.json())
 
 let Rollbar = require("rollbar");
 let rollbar = new Rollbar({
-    accessToken: '46wb02h51dda489tb2e24v454e46r8967', //I did not provided my actual Token! sad face->  =(  <-sad face
+    accessToken: '46w202h5102a489t62e24v454e46r8967', //I did not provided my actual Token! sad face->  =(  <-sad face
     captureUncaught: true,
     captureUnhandleRejections: true
 });
