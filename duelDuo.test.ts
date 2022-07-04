@@ -1,4 +1,3 @@
-
 import { Builder, Capabilities, By } from "selenium-webdriver"
 
 require('chromedriver')
@@ -13,24 +12,38 @@ afterAll(async () => {
     driver.quit()
 })
 
-test('Title shows up when page loads', async () => {
-    const title = await driver.findElement(By.id('title'))
-    const displayed = await title.isDisplayed()
+// test('Title shows up when page loads', async () => {
+//   const title = await driver.findElement(By.id('title'))
+//   const displayed = await title.isDisplayed()
+//   expect(displayed).toBe(true)
+//  })
+
+
+test('"Draw" button display choices section', async () => {
+    await driver.findElement(By.id('draw')).click()
+    const choicesSection = await driver.findElement(By.id('choices'))
+    const displayed = await choicesSection.isDisplayed()
     expect(displayed).toBe(true)
 })
 
 
-test('object assigment', () => {
-    const data = {one: 1};
-    data['two'] = 2;
-    expect(data).toEqual({one: 1, two:2});
-});
+test('"Add to Duo" button display the player duo section', async () => {
+    await driver.findElement(By.id('draw')).click()
+    await driver.findElement(By.css('.bot-btn')).click()
+    const playerDuoSection = await driver.findElement(By.id('player-duo'))
+    const displayed = await playerDuoSection.isDisplayed()
+    expect(displayed).toBe(true)
+})
 
 
-test('adding positive numbers is not zero', () => {
-    for (let a = 1; a < 10; a++) {
-        for (let b = 1; b < 10; b++) {
-            expect(a + b).not.toBe(0);
-        }
-    }
-});
+test('"Add to Duo" button displays the player duo section', async () => {
+    await driver.findElement(By.id('draw')).click()
+    await driver.findElement(By.css('.bot-btn')).click()
+    const playerDuoSection = await driver.findElement(By.id('player-duo'))
+    const selectedRobotName = await driver.findElement(By.xpath('//div[@id="player-duo"]/div/h3')).getText()
+    await driver.findElement(By.xpath('//button[text()="Remove from Duo"]')).click()
+    const returnedRobot = await driver.findElement(By.xpath('//div[@id="choices"]/div/h3[contains(text(), ' + selectedRobotName + ')]'))
+    await driver.sleep(2000)
+    const displayed = await returnedRobot.isDisplayed()
+    expect(displayed).toBe(true)
+})
