@@ -1,17 +1,21 @@
 const {shuffleArray} = require('./utils')
 
-describe('shuffleArray should', () => {
-    // CODE HERE
+const testArr1 = [1,2,3,4]
+const testArr2 = []
+const testArr3 = [45,64,1,35,5]
 
-    const users = [{id: 1, name: 'bot'}, {id: 2, name: 'robot'}];
+// CODE HERE
 
-test('We should have ids 1 and 2', () => {
-    expect(users).toEqual(
-        expect.arrayContaining([
-            expect.objectContaining({id: 1}),
-            expect.objectContaining({id: 2})
-        ])
-    )
+describe('shuffleArray should', () => {})
+test('return an array', () => {
+    expect(Array.isArray(shuffleArray(testArr1))).toBe(true)
+    expect(Array.isArray(shuffleArray(testArr2))).toBe(true)
+    expect(Array.isArray(shuffleArray(testArr3))).toBe(true)
 })
 
-})
+
+test('have its output array have the same length as its input array', () => {
+    expect(shuffleArray(testArr1).length).toBe(testArr1.length)
+    expect(shuffleArray(testArr2).length).toBe(testArr2.length)
+    expect(shuffleArray(testArr3).length).toBe(testArr3.length)
+   })
