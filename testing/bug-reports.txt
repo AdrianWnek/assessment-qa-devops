@@ -1,0 +1,46 @@
+Bug Reports
+
+July 3, 2022
+
+
+
+
+
+
+Information:
+
+- "See All Bots" button do not work.
+
+
+
+
+How to test it properly:
+
+#1. type in the browser "localhost:3000"
+
+#2. Click buttons "See All Bots"
+
+
+
+
+
+
+
+Results:
+
+#1. Page should appear with robots
+
+#2. By clicking the button, it creates errors in the browser.
+
+
+
+
+
+
+
+Operating system and Chrome:
+
+#1. Windows 11 Pro
+
+#2. Chrome 103.0.5060.114(Official Build) (64-bit)
+

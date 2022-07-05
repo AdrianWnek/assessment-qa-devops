@@ -1,0 +1,47 @@
+Test Plan - DUEL
+
+Overview:
+
+- Test the app if it works properly
+
+
+
+
+Link to the app:
+
+- localhost:3000
+
+
+
+
+Test:
+
+#1 Robot battle works
+
+#2 There are instructions how to duel
+
+#3 #3 Page has a blue styling
+
+#4 There is a list of robots
+
+
+
+
+Entry:
+
+
+
+#1 Project downloaded to local machine
+
+#2 Node running on port 3000
+
+#3 Server has access to Chrome
+
+#4 All this is running on Desktop
+
+
+
+Final result:
+
+All tests display that they run and pass
+

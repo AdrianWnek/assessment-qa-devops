@@ -1,0 +1,20 @@
+Test:
+
+The test will verify that robots are showing up on the page when clicked button "Draw"
+
+
+
+
+How to test it:
+
+#1 Go to "localhost:3000"
+
+#2 Click the "Draw" button
+
+
+
+
+
+Test result:
+
+1. two Robots should appear
